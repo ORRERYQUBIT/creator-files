@@ -557,41 +557,6 @@
    "url": "https://superapolon.github.io/creator-files/works/game-shelf/pv.mp4"
   },
   {
-   "path": "works/harbor-window/01-dawn.png",
-   "kind": "image",
-   "size": 1591612,
-   "sha256": "224f5efc057211564dd303ecdbdb3e85efa31d634cdf296a8d433bd96d5190a1",
-   "url": "https://superapolon.github.io/creator-files/works/harbor-window/01-dawn.png"
-  },
-  {
-   "path": "works/harbor-window/02-day.png",
-   "kind": "image",
-   "size": 1877823,
-   "sha256": "b99efa8f3ac7e5965f16d4f5d5f758303f4a207879bd292b0614b93f6fc3ad17",
-   "url": "https://superapolon.github.io/creator-files/works/harbor-window/02-day.png"
-  },
-  {
-   "path": "works/harbor-window/03-dusk.png",
-   "kind": "image",
-   "size": 2132668,
-   "sha256": "cf8480f2e2514708e087cfc77b200ee94b3dcef29d56900c4496502ec85aaef6",
-   "url": "https://superapolon.github.io/creator-files/works/harbor-window/03-dusk.png"
-  },
-  {
-   "path": "works/harbor-window/04-night.png",
-   "kind": "image",
-   "size": 1899847,
-   "sha256": "03cec2893addea0f56d4dab762813690b377e5352ca298a24e2fe55c4ebb2363",
-   "url": "https://superapolon.github.io/creator-files/works/harbor-window/04-night.png"
-  },
-  {
-   "path": "works/harbor-window/cover.png",
-   "kind": "image",
-   "size": 1593777,
-   "sha256": "15f239709afe92851c41852e73b51f386d79a48c4de774ae934aca20c6ad0a09",
-   "url": "https://superapolon.github.io/creator-files/works/harbor-window/cover.png"
-  },
-  {
    "path": "works/kazaana/art/sky-tall.png",
    "kind": "image",
    "size": 3984967,
@@ -611,20 +576,6 @@
    "size": 3688200,
    "sha256": "7fb10595c749ac39f6a3375eb5a1bb270fdcf67f420ce372e4a8b4518c5e8a63",
    "url": "https://superapolon.github.io/creator-files/works/kazaana/art/sky.png"
-  },
-  {
-   "path": "works/yorimichi-desk/art/props/brush-wash-violet.png",
-   "kind": "image",
-   "size": 1245154,
-   "sha256": "47d3b5107cd659c4a96eba936aca823f482f557bf9ba01b0871d1d5ec7710ca1",
-   "url": "https://superapolon.github.io/creator-files/works/yorimichi-desk/art/props/brush-wash-violet.png"
-  },
-  {
-   "path": "works/yorimichi-desk/art/props/palette-violet-drop.png",
-   "kind": "image",
-   "size": 1078868,
-   "sha256": "bbc42096885fa8c484fa2275988ab29650b7b19e277ef9c89b953220b9f97d16",
-   "url": "https://superapolon.github.io/creator-files/works/yorimichi-desk/art/props/palette-violet-drop.png"
   }
  ]
 }
