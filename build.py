@@ -125,6 +125,6 @@ for w in works:
   c=creators.get(w['creator'],{});s=series[w['series']]
   arts=''.join(f'<img src="{e(_asrc(w,a,a))}" alt="{e(w["title"])}">' for a in w['arts']) or (f'<img src="@R@{COVER}" alt="">' if COVER else '')
   if w.get('viewer'):
-    arts=f'<iframe title="{e(w["title"])} ビューアー" src="{e(w["viewer"])}" style="width:100%;height: min(72vh,720px);min-height:420px;border:0;border-radius:10px;display:block" allow="fullscreen"></iframe>'
+    arts=f'<iframe title="{e(w["title"])} ビューアー" src="{e(w["viewer"])}" style="width:100%;height: min(72vh,720px);min-height:420px;border:0;border-radius:10px;display:block" allow="fullscreen; gamepad"></iframe>'
   page(f"w/{w['series']}/{w['id']}",w['title'],f'<article><div class="crumb"><a href="@R@c/{e(w["creator"])}/">{e(c.get("name",w.get("authorName","")))}</a>›<a href="@R@s/{e(s["id"])}/">{e(s["title"])}</a></div><h1>{e(w["title"])}</h1><p><span class="pill">{e(s["title"])}</span>作者: <a href="@R@c/{e(w["creator"])}/">{e(w.get("authorName") or c.get("name",""))}</a></p>'+(roombtn(w['creator'],'この部屋を歩く') if w['series']=='my-room' else '')+f'<div class="arts">{arts}</div><div class="body">{md(w["body"])}</div></article>')
 print(f'creators={len(shown)} series={len(sl)} works={len(works)} kota={"kota" in [c["id"] for c in shown]}')
