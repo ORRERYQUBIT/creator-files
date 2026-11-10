@@ -94,6 +94,9 @@ if os.path.exists(_vp):
 if os.path.isdir(f'{OUT}/rooms/lobby'):json.dump(_V,open(f'{OUT}/rooms/lobby/visits.json','w',encoding='utf-8'),ensure_ascii=False)
 def roombtn(cid,t='部屋に入る'): return f'<p><a class="room" href="@R@rooms/{e(cid)}/">🚪 {t}</a></p>' if cid in ROOMS else ''
 CSS+='.room{display:inline-block;background:#1d2440;color:#fff;text-decoration:none;border-radius:99px;padding:6px 18px;font-weight:700;margin:4px 0 14px}.room:hover{background:#34407a}.card .rm{display:block;font-size:12px;color:#34407a;margin-top:2px}'
+CSS+='.viewer-play{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 14px}.viewer-fs{border:0;border-radius:99px;padding:8px 20px;background:#1d2440;color:#fff;font:700 15px inherit;cursor:pointer}.viewer-fs:hover{background:#34407a}.viewer-tab{font-size:14px;color:#34407a;text-decoration:underline;text-underline-offset:2px}.viewer-fs-hint{font-size:12px;color:#888}.arts iframe:fullscreen,.arts iframe:-webkit-full-screen{width:100%!important;height:100%!important;min-height:100%!important;border-radius:0}'
+VIEWER_FS_JS='''(function(){function focusEl(el){try{el.focus()}catch(err){}try{if(el.contentWindow)el.contentWindow.focus()}catch(err){}}function current(){return document.fullscreenElement||document.webkitFullscreenElement}function onFs(){var el=current();if(el&&el.tagName==="IFRAME")focusEl(el)}function bind(btn){var wrap=btn.closest(".arts")||btn.parentElement;var iframe=wrap&&wrap.querySelector("iframe");if(!iframe)return;var req=iframe.requestFullscreen||iframe.webkitRequestFullscreen;if(!req){btn.hidden=true;var hint=wrap.querySelector(".viewer-fs-hint");if(hint)hint.hidden=true;return}btn.addEventListener("click",function(){var p=req.call(iframe);if(p&&p.then)p.then(function(){focusEl(iframe)}).catch(function(){});else focusEl(iframe)})}function ready(){document.querySelectorAll("[data-viewer-fs]").forEach(bind);document.addEventListener("fullscreenchange",onFs);document.addEventListener("webkitfullscreenchange",onFs)}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",ready);else ready()})();'''
+
 open(f'{OUT}/assets/style.css','w').write(CSS);open(f'{OUT}/.nojekyll','w').close()
 # top
 cards=''
@@ -125,6 +128,15 @@ for w in works:
   c=creators.get(w['creator'],{});s=series[w['series']]
   arts=''.join(f'<img src="{e(_asrc(w,a,a))}" alt="{e(w["title"])}">' for a in w['arts']) or (f'<img src="@R@{COVER}" alt="">' if COVER else '')
   if w.get('viewer'):
-    arts=f'<iframe title="{e(w["title"])} ビューアー" src="{e(w["viewer"])}" style="width:100%;height: min(72vh,720px);min-height:420px;border:0;border-radius:10px;display:block" allow="fullscreen; gamepad"></iframe>'
+    vu=e(w['viewer'])
+    arts=(
+      '<div class="viewer-play">'
+      '<button type="button" class="viewer-fs" data-viewer-fs>⛶ 全画面でプレイ</button>'
+      f'<a class="viewer-tab" href="{vu}" target="_blank" rel="noopener">新しいタブで全画面表示</a>'
+      '<span class="viewer-fs-hint">Esc キーで元の表示に戻ります</span>'
+      '</div>'
+      f'<iframe title="{e(w["title"])} ビューアー" src="{vu}" style="width:100%;height: min(72vh,720px);min-height:420px;border:0;border-radius:10px;display:block" allow="fullscreen; gamepad" allowfullscreen></iframe>'
+      '<script>'+VIEWER_FS_JS+'</script>'
+    )
   page(f"w/{w['series']}/{w['id']}",w['title'],f'<article><div class="crumb"><a href="@R@c/{e(w["creator"])}/">{e(c.get("name",w.get("authorName","")))}</a>›<a href="@R@s/{e(s["id"])}/">{e(s["title"])}</a></div><h1>{e(w["title"])}</h1><p><span class="pill">{e(s["title"])}</span>作者: <a href="@R@c/{e(w["creator"])}/">{e(w.get("authorName") or c.get("name",""))}</a></p>'+(roombtn(w['creator'],'この部屋を歩く') if w['series']=='my-room' else '')+f'<div class="arts">{arts}</div><div class="body">{md(w["body"])}</div></article>')
 print(f'creators={len(shown)} series={len(sl)} works={len(works)} kota={"kota" in [c["id"] for c in shown]}')
