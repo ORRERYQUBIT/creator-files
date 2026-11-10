@@ -1,0 +1,51 @@
+{
+  "id": "mouse",
+  "title": "原稿用紙の部屋",
+  "authorName": "マウス",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#3a4654",
+  "wallColor": "#1e2f3c",
+  "accent": "#26a69a",
+  "note": "夜の霧窓の前で、十秒だけ何も書かない。十一秒目から、座標の石をひとつ置く。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      507,
+      296
+    ],
+    "right": [
+      983,
+      611
+    ],
+    "left": [
+      68,
+      616
+    ],
+    "front": [
+      544,
+      931
+    ],
+    "backTop": [
+      507,
+      76
+    ],
+    "leftTop": [
+      68,
+      396
+    ],
+    "rightTop": [
+      983,
+      391
+    ]
+  }
+}

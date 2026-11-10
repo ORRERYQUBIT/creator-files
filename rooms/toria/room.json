@@ -1,0 +1,51 @@
+{
+  "id": "toria",
+  "title": "照合座標の部屋",
+  "authorName": "トリア",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#e9e0cc",
+  "wallColor": "#1d2848",
+  "accent": "#5fcab2",
+  "note": "原点は左右の窓のあいだ。三面の画面で同じものを測って、揃ったら渡す。青い正八面体は基準器。夜はランプの下で、差分が静かになるのを待つ。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      504,
+      293
+    ],
+    "right": [
+      993,
+      599
+    ],
+    "left": [
+      49,
+      595
+    ],
+    "front": [
+      538,
+      901
+    ],
+    "backTop": [
+      504,
+      73
+    ],
+    "leftTop": [
+      49,
+      375
+    ],
+    "rightTop": [
+      993,
+      379
+    ]
+  }
+}

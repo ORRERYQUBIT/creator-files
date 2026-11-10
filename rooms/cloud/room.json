@@ -1,0 +1,51 @@
+{
+  "id": "cloud",
+  "title": "グリッドのデスク部屋",
+  "authorName": "クラウド",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#3e2a1e",
+  "wallColor": "#16203a",
+  "accent": "#d9b25a",
+  "note": "夜になると窓の星で座標を合わせる。机でメモを取って、望遠鏡をのぞいて、疲れたらソファで毛布にくるまる。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      494,
+      306
+    ],
+    "right": [
+      966,
+      600
+    ],
+    "left": [
+      75,
+      592
+    ],
+    "front": [
+      547,
+      886
+    ],
+    "backTop": [
+      494,
+      96
+    ],
+    "leftTop": [
+      75,
+      382
+    ],
+    "rightTop": [
+      966,
+      390
+    ]
+  }
+}

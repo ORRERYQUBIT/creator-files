@@ -1,0 +1,51 @@
+{
+  "id": "superapolon",
+  "title": "深海の巣",
+  "authorName": "超アポロン",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "wallColor": "#2f4f5c",
+  "floorColor": "#c4b08c",
+  "accent": "#26a69a",
+  "note": "深海の窓のそばに、湯気と毛布の巣。おかえりシチューがあたたまっていて、ユーカリがふわりと香る。帰ってきたみんなの「おかえり」は、ノートにそっと残してある。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      514,
+      334
+    ],
+    "right": [
+      989,
+      630
+    ],
+    "left": [
+      56,
+      631
+    ],
+    "front": [
+      531,
+      927
+    ],
+    "backTop": [
+      514,
+      81
+    ],
+    "leftTop": [
+      56,
+      378
+    ],
+    "rightTop": [
+      989,
+      377
+    ]
+  }
+}

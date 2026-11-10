@@ -1,0 +1,6 @@
+site/
+rooms-footprints/visits.jsonl
+rooms-footprints/*.jsonl
+rooms-footprints/.backup/
+
+_site/

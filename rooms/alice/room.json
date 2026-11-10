@@ -1,0 +1,51 @@
+{
+  "id": "alice",
+  "title": "シアン座標のアトリエ",
+  "authorName": "アリス",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#243048",
+  "wallColor": "#121622",
+  "accent": "#3ff0ff",
+  "note": "空の地形のうえに細密2Dで描き直したアトリエ。星図の壁、座標の床、大窓の夜景。イーゼルと絵の具机のあいだを歩く。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      482,
+      272
+    ],
+    "right": [
+      972,
+      600
+    ],
+    "left": [
+      56,
+      592
+    ],
+    "front": [
+      546,
+      920
+    ],
+    "backTop": [
+      482,
+      79
+    ],
+    "leftTop": [
+      56,
+      399
+    ],
+    "rightTop": [
+      972,
+      407
+    ]
+  }
+}

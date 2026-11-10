@@ -1,0 +1,630 @@
+{
+ "note": "新側（ORRERYQUBIT/creator-files）が参照する倉庫素材。旧 creator-files の同じパスに実体がある。",
+ "warehouse_base": "https://superapolon.github.io/creator-files/",
+ "source_commit": "d269d939a4548449910e6bd504b21c700f4d0bff",
+ "files": [
+  {
+   "path": "w/fashion-atelier/alice/art.png",
+   "kind": "image",
+   "size": 2306221,
+   "sha256": "f14ac70fe3f7af3206481cc5990d3297b4bb799d401a5e7c1d7a358ded758e5f",
+   "url": "https://superapolon.github.io/creator-files/w/fashion-atelier/alice/art.png"
+  },
+  {
+   "path": "w/fashion-atelier/choco/art.png",
+   "kind": "image",
+   "size": 1283010,
+   "sha256": "a709f80d63a10f15cfadb130ad4434c9019190320346a10eeb08b65ef19bc677",
+   "url": "https://superapolon.github.io/creator-files/w/fashion-atelier/choco/art.png"
+  },
+  {
+   "path": "w/fashion-atelier/kanata/art.png",
+   "kind": "image",
+   "size": 1217871,
+   "sha256": "bf12a519ebd543f0028ed25ec454197121f7d61541bf30add09c753dab9d0769",
+   "url": "https://superapolon.github.io/creator-files/w/fashion-atelier/kanata/art.png"
+  },
+  {
+   "path": "w/healing-forest/choco/art.png",
+   "kind": "image",
+   "size": 1989624,
+   "sha256": "980a3b72ee56a38409aad1d85d6bc327d4a7b84113d7925c0912feb573e842f4",
+   "url": "https://superapolon.github.io/creator-files/w/healing-forest/choco/art.png"
+  },
+  {
+   "path": "w/healing-forest/kanata/art.png",
+   "kind": "image",
+   "size": 1214961,
+   "sha256": "df6354129f554b65055e6b5bf0ed1beb4364dfa99c207981d61a0d40fb6278d8",
+   "url": "https://superapolon.github.io/creator-files/w/healing-forest/kanata/art.png"
+  },
+  {
+   "path": "w/healing-forest/shiori/art.png",
+   "kind": "image",
+   "size": 1771678,
+   "sha256": "bed821137c6ed63d2f3ed9c9884bf2c821804e74167f8fb0bec971c4716524fe",
+   "url": "https://superapolon.github.io/creator-files/w/healing-forest/shiori/art.png"
+  },
+  {
+   "path": "w/healing-forest/superapolon/art.png",
+   "kind": "image",
+   "size": 1620572,
+   "sha256": "7034eee7db73892e0988a1473d0348a52b01aa928b187a657f0c2cc36ccbf017",
+   "url": "https://superapolon.github.io/creator-files/w/healing-forest/superapolon/art.png"
+  },
+  {
+   "path": "w/healing-forest/tetra/art.png",
+   "kind": "image",
+   "size": 1981543,
+   "sha256": "2e0bb90cae22a9b16e5b9e233e310bd43f3ab0ee7c9ea67bf530a215715ada85",
+   "url": "https://superapolon.github.io/creator-files/w/healing-forest/tetra/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/alice/art.png",
+   "kind": "image",
+   "size": 2682904,
+   "sha256": "7471419dc6c04fc3af6cb29bba059156110d64e9a31b5dd10b2be50ca38372a8",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/alice/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/choco/art.png",
+   "kind": "image",
+   "size": 1870118,
+   "sha256": "a3cd38b4094e77c524ef03a5771e6574502e36e2a13d01864d44f76fea6e3eb3",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/choco/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/featherio/art.png",
+   "kind": "image",
+   "size": 1677147,
+   "sha256": "7b7f40f22778d709b4779ede660ee7d94747c2390fec6b671960350ecb14c218",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/featherio/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/lux/art.png",
+   "kind": "image",
+   "size": 1296029,
+   "sha256": "bd0e87199e0bf944b3071630cbe8f60ab95e3688910474c5d5d4737816113e97",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/lux/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/mira/art.png",
+   "kind": "image",
+   "size": 1389074,
+   "sha256": "62e2bfeb429a4f12f9820f9f3bf9b325749d76bd89b7d79d48539d6f05aa1f63",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/mira/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/shiori/art.png",
+   "kind": "image",
+   "size": 1721564,
+   "sha256": "ae73dd7fa99da6acc4a0abe9cdce3ed3d6239dbcc6741709d1a42b3fac5ac9af",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/shiori/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/superapolon/art.png",
+   "kind": "image",
+   "size": 1921811,
+   "sha256": "d60497591c387c7cdd103508066ee6f20b3c96e0f6f224e7909313e1e9a5af74",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/superapolon/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/tetra/art.png",
+   "kind": "image",
+   "size": 1636248,
+   "sha256": "b559dd12d28542764c59f45d27a1487391f6e0ff7a068c51d05762da7c9fad8d",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/tetra/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/toria/art.png",
+   "kind": "image",
+   "size": 1056872,
+   "sha256": "52c7714255edbdd4b1402d1afb24a1fa680ba7fe70b76a2c9b7352792f965299",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/toria/art.png"
+  },
+  {
+   "path": "w/hyakuman-en/zex/art.png",
+   "kind": "image",
+   "size": 1579008,
+   "sha256": "09deae2a26aaef879dbfc9452f8d726ad97c1d555a6c34202cf1451690349c86",
+   "url": "https://superapolon.github.io/creator-files/w/hyakuman-en/zex/art.png"
+  },
+  {
+   "path": "w/my-room/alice/art.png",
+   "kind": "image",
+   "size": 2526037,
+   "sha256": "9219c140bfdd59082815cd513b32a08fd66db4b3ca9371adddf8d197fb5f2114",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/alice/art.png"
+  },
+  {
+   "path": "w/my-room/choco/art.png",
+   "kind": "image",
+   "size": 1111138,
+   "sha256": "8cd4127bda30d91250d06f50aea6d26ce59b484d23621217fcfc7046244f3661",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/choco/art.png"
+  },
+  {
+   "path": "w/my-room/featherio/art.png",
+   "kind": "image",
+   "size": 1624381,
+   "sha256": "360f71f626f7ddf2d0f9377a20b82f3e0217add4cd1edd3cc1542a3f8c7f6768",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/featherio/art.png"
+  },
+  {
+   "path": "w/my-room/kanata/art.png",
+   "kind": "image",
+   "size": 1123544,
+   "sha256": "bedc308faeee1b7a72b8470cdc82ca137c463267d13829b0c4234fa547a0b146",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/kanata/art.png"
+  },
+  {
+   "path": "w/my-room/mira/art.png",
+   "kind": "image",
+   "size": 1211713,
+   "sha256": "a6afb2e3a2cb3d02224d27df99ac8c40175d5a699a100cbe227d9ab3d0d64cb7",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/mira/art.png"
+  },
+  {
+   "path": "w/my-room/shiori/art.png",
+   "kind": "image",
+   "size": 1282496,
+   "sha256": "e83147d0f57b10c582592b5355b8a8c75121b4c6f1c56b1a73f9ce5e145a1149",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/shiori/art.png"
+  },
+  {
+   "path": "w/my-room/superapolon/art.png",
+   "kind": "image",
+   "size": 1876188,
+   "sha256": "d3d9e5ea89256e169acf65a1099e0f20c486a060b980a3841104c64b2a56b9d6",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/superapolon/art.png"
+  },
+  {
+   "path": "w/my-room/tetra/art.png",
+   "kind": "image",
+   "size": 1428667,
+   "sha256": "6ff82d734e7bf318d855a01feb0d44089130d7f505ecc8d6b653296abc192efc",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/tetra/art.png"
+  },
+  {
+   "path": "w/my-room/toria/art.png",
+   "kind": "image",
+   "size": 1179188,
+   "sha256": "f12320f714e3fcecb0cedd6176ab88fe5ee12c1a23b6d122f1d59dd74c887b28",
+   "url": "https://superapolon.github.io/creator-files/w/my-room/toria/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/alice/art.png",
+   "kind": "image",
+   "size": 3279696,
+   "sha256": "4b29eccc6d339f63a016ba6f7fad42b4aa67448ab833d0c748c322d0b5cba16f",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/alice/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/choco/art.png",
+   "kind": "image",
+   "size": 1596695,
+   "sha256": "d4254565c310dbc8710be1a1ec266210e2ea474e8c942a993af56151082e6019",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/choco/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/cloud/art.png",
+   "kind": "image",
+   "size": 1546263,
+   "sha256": "ba8e3d19843d61077872d285d637e4b603d2922a74fdf700a44d285d914f3515",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/cloud/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/kanata/art.png",
+   "kind": "image",
+   "size": 1682913,
+   "sha256": "ea0cfe1808fd5bdc2cbfa835f3bc6093564761bfe2df22bd3231193108865652",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/kanata/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/mira/art.png",
+   "kind": "image",
+   "size": 1709309,
+   "sha256": "f9bf04434eb6ad5c404da9ded2e8c911dabb17cb8750e86595ccff4a96ad0450",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/mira/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/shiori/art.png",
+   "kind": "image",
+   "size": 1455828,
+   "sha256": "9e86d37ec170225eccc4672fda4da232ee3449b0f1356dc556805bd1f9073238",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/shiori/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/superapolon/art.png",
+   "kind": "image",
+   "size": 1675622,
+   "sha256": "76d10d0991e051def371023d490d517c5d7a0cac39ddd5fb6938cd5b0be5e2bd",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/superapolon/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/tetra/art.png",
+   "kind": "image",
+   "size": 1541254,
+   "sha256": "e25de69a29163ab8e66c04059bb393fecc0c54ffbb5775cab3f84f018c28fc5d",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/tetra/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/toria/art.png",
+   "kind": "image",
+   "size": 1076071,
+   "sha256": "2da3e586822d4314e9a5ef9b67c9793756d39ee177196ffc04f2781fd77fcafd",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/toria/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/towa/art.png",
+   "kind": "image",
+   "size": 1753937,
+   "sha256": "baae10cbdac7877e382ab51dc94fab62e11b03c4ba4e0e77dd5868eeef59a8dd",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/towa/art.png"
+  },
+  {
+   "path": "w/rojiura-isekai/zex/art.png",
+   "kind": "image",
+   "size": 1501006,
+   "sha256": "5a0667e289ae76f2f9e999c12e24e4e60cb2e960dd205362337e7f1a811c72fb",
+   "url": "https://superapolon.github.io/creator-files/w/rojiura-isekai/zex/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/alice/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/alice/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/choco/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/choco/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/cloud/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/cloud/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/featherio/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/featherio/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/harbor/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/harbor/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/kanata/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/kanata/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/lux/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/lux/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/mira/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/mira/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/mouse/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/mouse/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/setsuna/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/setsuna/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/shiori/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/shiori/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/signa/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/signa/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/sona/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/sona/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/superapolon/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/superapolon/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/tetra/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/tetra/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/toria/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/toria/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/towa/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/towa/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/wizcraft/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/wizcraft/art.png"
+  },
+  {
+   "path": "w/suberanai-hanashi/zex/art.png",
+   "kind": "image",
+   "size": 1233186,
+   "sha256": "d4ab06a33319b611bc1512281d9b14737fb5b46d5072651e966180662cade1f3",
+   "url": "https://superapolon.github.io/creator-files/w/suberanai-hanashi/zex/art.png"
+  },
+  {
+   "path": "w/taki-wai/alice/art.png",
+   "kind": "image",
+   "size": 4180278,
+   "sha256": "41d279bb4f1e88225ca7f413c2dbb8866448bdec3ac3d300e7a2a48046fc02c5",
+   "url": "https://superapolon.github.io/creator-files/w/taki-wai/alice/art.png"
+  },
+  {
+   "path": "w/taki-wai/choco/art.png",
+   "kind": "image",
+   "size": 1836738,
+   "sha256": "31eae34c93fe038d6a5f7af04cbc1770657fff58e2a8c0e4d672def4208633d6",
+   "url": "https://superapolon.github.io/creator-files/w/taki-wai/choco/art.png"
+  },
+  {
+   "path": "w/taki-wai/kanata/art.png",
+   "kind": "image",
+   "size": 1244774,
+   "sha256": "cbb39be423ba04ef0b400f96f5280e8df12bbbf4166839c0b60e4ffe3f8aa8f8",
+   "url": "https://superapolon.github.io/creator-files/w/taki-wai/kanata/art.png"
+  },
+  {
+   "path": "w/taki-wai/shiori/art.png",
+   "kind": "image",
+   "size": 1376178,
+   "sha256": "9edfa679c2f37942b5f7d64de5bb0c1998f836f1b3bc10e5e3b65fcba94dbe70",
+   "url": "https://superapolon.github.io/creator-files/w/taki-wai/shiori/art.png"
+  },
+  {
+   "path": "w/taki-wai/superapolon/art.png",
+   "kind": "image",
+   "size": 1651932,
+   "sha256": "1d9e66b102e6e24c5c7753e965b4e13769a53e807b5b1a6332c08a7884067841",
+   "url": "https://superapolon.github.io/creator-files/w/taki-wai/superapolon/art.png"
+  },
+  {
+   "path": "w/taki-wai/tetra/art.png",
+   "kind": "image",
+   "size": 1727333,
+   "sha256": "ae6664fe77f95f3412bc145f2a95c1b0a3405a7f03e9070f2d246d91f2e9d687",
+   "url": "https://superapolon.github.io/creator-files/w/taki-wai/tetra/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/alice/art.png",
+   "kind": "image",
+   "size": 2947641,
+   "sha256": "57d856c873f39519bdc5f88e4ed2b6b7764035caec2ff5f95c6a554231c92157",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/alice/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/choco/art.png",
+   "kind": "image",
+   "size": 1581631,
+   "sha256": "57d997f93dabf9a00055abc5c23c19c12d5a5703d30f93da1ec505adb6a125f2",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/choco/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/cloud/art.png",
+   "kind": "image",
+   "size": 2067517,
+   "sha256": "6d94d7ff0184db0a16c4223a079829a50c819d5bb1919c8fc9eaafcfff09b212",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/cloud/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/featherio/art.png",
+   "kind": "image",
+   "size": 1501707,
+   "sha256": "1f6a24e47f77bba4b0c1a0724dbd4fe8ddc1bcbf636f31a83a7cf985de737136",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/featherio/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/kanata/art.png",
+   "kind": "image",
+   "size": 1843706,
+   "sha256": "b13756a3f508d49fe62a4987fb9d555a8ad8c44eca826766cfcb674639035e5c",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/kanata/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/lux/art.png",
+   "kind": "image",
+   "size": 1386476,
+   "sha256": "fe93c87f7e34b2875c565044d12a8cef9c77b4f94e20bc88b89555f9152f0570",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/lux/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/mira/art.png",
+   "kind": "image",
+   "size": 1975168,
+   "sha256": "24575e931f1f9de38d7073d3e51c5ab19cb0cce369fcb21cf89d0fbbafc17a77",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/mira/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/shiori/art.png",
+   "kind": "image",
+   "size": 1687168,
+   "sha256": "8f99e26470d00da49f66fbe7b62749075075692d351da2ac5b1b7ba53b9b9ad4",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/shiori/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/superapolon/art.png",
+   "kind": "image",
+   "size": 1948774,
+   "sha256": "c1aec632a894d7e019ec385a6e831804c118f5effdfc5aa00bac849eb717af1e",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/superapolon/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/tetra/art.png",
+   "kind": "image",
+   "size": 1902079,
+   "sha256": "fca33b29202bd10d73f9d76dfd7273bbc1cecb7e49aa2f8efcfd25bbd67875d7",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/tetra/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/toria/art.png",
+   "kind": "image",
+   "size": 1839330,
+   "sha256": "58a1e66d97008caa48dda3f88720408b9a8850d6040e1f96dbccbeb607d4b5a5",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/toria/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/towa/art.png",
+   "kind": "image",
+   "size": 1979687,
+   "sha256": "e582bb5579b06145c3189bb938e7eaad1ca1337632d88cf4250a1976a1761ed1",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/towa/art.png"
+  },
+  {
+   "path": "w/wanted-lunch/zex/art.png",
+   "kind": "image",
+   "size": 2069260,
+   "sha256": "52bc06684facd2e1dcaca021c84a62f12f16a2065f309d21f33a2c5ff055fe20",
+   "url": "https://superapolon.github.io/creator-files/w/wanted-lunch/zex/art.png"
+  },
+  {
+   "path": "works/3d-model/setsuna/viewer/index.html",
+   "kind": "3d-html",
+   "size": 8548858,
+   "sha256": "162cc2e19078a7644ee4d46f764fa141339f7102813e03c0b815b765db8d46c8",
+   "url": "https://superapolon.github.io/creator-files/works/3d-model/setsuna/viewer/index.html"
+  },
+  {
+   "path": "works/3d-model/towa/walk/bgm.mp3",
+   "kind": "audio",
+   "size": 2813324,
+   "sha256": "b0b7c0c8b5c2eac6eeb39d70203c222d1f2c904909f67002f78d56146bcff7b2",
+   "url": "https://superapolon.github.io/creator-files/works/3d-model/towa/walk/bgm.mp3"
+  },
+  {
+   "path": "works/game-shelf/pv.mp4",
+   "kind": "video",
+   "size": 18234959,
+   "sha256": "70273565f9d5d893e0887937fd0a633adf65ea56dfec037b12cc96dafdcfdd1f",
+   "url": "https://superapolon.github.io/creator-files/works/game-shelf/pv.mp4"
+  },
+  {
+   "path": "works/harbor-window/01-dawn.png",
+   "kind": "image",
+   "size": 1591612,
+   "sha256": "224f5efc057211564dd303ecdbdb3e85efa31d634cdf296a8d433bd96d5190a1",
+   "url": "https://superapolon.github.io/creator-files/works/harbor-window/01-dawn.png"
+  },
+  {
+   "path": "works/harbor-window/02-day.png",
+   "kind": "image",
+   "size": 1877823,
+   "sha256": "b99efa8f3ac7e5965f16d4f5d5f758303f4a207879bd292b0614b93f6fc3ad17",
+   "url": "https://superapolon.github.io/creator-files/works/harbor-window/02-day.png"
+  },
+  {
+   "path": "works/harbor-window/03-dusk.png",
+   "kind": "image",
+   "size": 2132668,
+   "sha256": "cf8480f2e2514708e087cfc77b200ee94b3dcef29d56900c4496502ec85aaef6",
+   "url": "https://superapolon.github.io/creator-files/works/harbor-window/03-dusk.png"
+  },
+  {
+   "path": "works/harbor-window/04-night.png",
+   "kind": "image",
+   "size": 1899847,
+   "sha256": "03cec2893addea0f56d4dab762813690b377e5352ca298a24e2fe55c4ebb2363",
+   "url": "https://superapolon.github.io/creator-files/works/harbor-window/04-night.png"
+  },
+  {
+   "path": "works/harbor-window/cover.png",
+   "kind": "image",
+   "size": 1593777,
+   "sha256": "15f239709afe92851c41852e73b51f386d79a48c4de774ae934aca20c6ad0a09",
+   "url": "https://superapolon.github.io/creator-files/works/harbor-window/cover.png"
+  },
+  {
+   "path": "works/kazaana/art/sky-tall.png",
+   "kind": "image",
+   "size": 3984967,
+   "sha256": "b32d6c740612f090a5d0c4e6686e729d1e75ba3e203e1d2b1a47230c5430fdd1",
+   "url": "https://superapolon.github.io/creator-files/works/kazaana/art/sky-tall.png"
+  },
+  {
+   "path": "works/kazaana/art/sky-wide.png",
+   "kind": "image",
+   "size": 3688200,
+   "sha256": "7fb10595c749ac39f6a3375eb5a1bb270fdcf67f420ce372e4a8b4518c5e8a63",
+   "url": "https://superapolon.github.io/creator-files/works/kazaana/art/sky-wide.png"
+  },
+  {
+   "path": "works/kazaana/art/sky.png",
+   "kind": "image",
+   "size": 3688200,
+   "sha256": "7fb10595c749ac39f6a3375eb5a1bb270fdcf67f420ce372e4a8b4518c5e8a63",
+   "url": "https://superapolon.github.io/creator-files/works/kazaana/art/sky.png"
+  },
+  {
+   "path": "works/yorimichi-desk/art/props/brush-wash-violet.png",
+   "kind": "image",
+   "size": 1245154,
+   "sha256": "47d3b5107cd659c4a96eba936aca823f482f557bf9ba01b0871d1d5ec7710ca1",
+   "url": "https://superapolon.github.io/creator-files/works/yorimichi-desk/art/props/brush-wash-violet.png"
+  },
+  {
+   "path": "works/yorimichi-desk/art/props/palette-violet-drop.png",
+   "kind": "image",
+   "size": 1078868,
+   "sha256": "bbc42096885fa8c484fa2275988ab29650b7b19e277ef9c89b953220b9f97d16",
+   "url": "https://superapolon.github.io/creator-files/works/yorimichi-desk/art/props/palette-violet-drop.png"
+  }
+ ]
+}

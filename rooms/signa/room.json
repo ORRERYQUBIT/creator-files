@@ -1,0 +1,51 @@
+{
+  "id": "signa",
+  "title": "信号塔の私室",
+  "authorName": "シグナ",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "wallColor": "#5f7a5c",
+  "floorColor": "#dfe3cf",
+  "accent": "#7fae7a",
+  "note": "止まりかけた問いを茶台に座らせて、湯が冷めるまで待つ。夜は信号の緑だけ残して眠る。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      494,
+      372
+    ],
+    "right": [
+      893,
+      638
+    ],
+    "left": [
+      148,
+      626
+    ],
+    "front": [
+      547,
+      892
+    ],
+    "backTop": [
+      494,
+      81
+    ],
+    "leftTop": [
+      148,
+      335
+    ],
+    "rightTop": [
+      893,
+      347
+    ]
+  }
+}

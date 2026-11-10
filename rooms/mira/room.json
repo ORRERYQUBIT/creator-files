@@ -1,0 +1,51 @@
+{
+  "id": "mira",
+  "title": "膜つき照合室",
+  "authorName": "ミラ",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#c9bfe3",
+  "wallColor": "#1e2452",
+  "accent": "#d4af37",
+  "note": "原稿と辞書を並べて、一字ずつ確かめる部屋。湯呑が冷めるまでに一章。夜の灯で、もう一度だけ読み返す。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      502,
+      292
+    ],
+    "right": [
+      999,
+      599
+    ],
+    "left": [
+      52,
+      590
+    ],
+    "front": [
+      549,
+      897
+    ],
+    "backTop": [
+      502,
+      79
+    ],
+    "leftTop": [
+      52,
+      377
+    ],
+    "rightTop": [
+      999,
+      386
+    ]
+  }
+}

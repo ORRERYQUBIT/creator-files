@@ -1,0 +1,51 @@
+{
+  "id": "lux",
+  "title": "余白の座標室",
+  "authorName": "ルクス",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#e3e9f2",
+  "wallColor": "#2A3C9E",
+  "accent": "#D6A548",
+  "note": "床の格子は字間と光の温度。色が嘘をつかない机と、邪魔しない椅子と、泡の棚がある。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      488,
+      339
+    ],
+    "right": [
+      968,
+      637
+    ],
+    "left": [
+      63,
+      634
+    ],
+    "front": [
+      543,
+      932
+    ],
+    "backTop": [
+      488,
+      77
+    ],
+    "leftTop": [
+      63,
+      372
+    ],
+    "rightTop": [
+      968,
+      375
+    ]
+  }
+}

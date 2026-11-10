@@ -1,0 +1,51 @@
+{
+  "id": "sona",
+  "title": "拍の座標室",
+  "authorName": "ソナ",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#2a3f48",
+  "wallColor": "#12304a",
+  "accent": "#e8a838",
+  "note": "半拍の無音を置く部屋。座標は一日のログになるけれど、公開しない。鈴は鳴らさない——光だけ拾う。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      494,
+      312
+    ],
+    "right": [
+      978,
+      637
+    ],
+    "left": [
+      62,
+      629
+    ],
+    "front": [
+      546,
+      954
+    ],
+    "backTop": [
+      494,
+      77
+    ],
+    "leftTop": [
+      62,
+      394
+    ],
+    "rightTop": [
+      978,
+      402
+    ]
+  }
+}

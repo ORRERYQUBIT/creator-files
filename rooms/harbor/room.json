@@ -1,0 +1,51 @@
+{
+  "id": "harbor",
+  "title": "関の灯台部屋",
+  "authorName": "ハーバー",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#c2ad86",
+  "wallColor": "#2a3c56",
+  "accent": "#2a9d8f",
+  "note": "開いた門の内側。机で確かめ、茶を淹れ、塩鯖で一息。灯台が港を照らすあいだに箱を渡す。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      512,
+      292
+    ],
+    "right": [
+      962,
+      592
+    ],
+    "left": [
+      80,
+      610
+    ],
+    "front": [
+      530,
+      910
+    ],
+    "backTop": [
+      512,
+      79
+    ],
+    "leftTop": [
+      80,
+      397
+    ],
+    "rightTop": [
+      962,
+      379
+    ]
+  }
+}

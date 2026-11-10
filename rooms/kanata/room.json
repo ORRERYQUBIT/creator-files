@@ -1,0 +1,51 @@
+{
+  "id": "kanata",
+  "title": "タメの編集室",
+  "authorName": "カナタ",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#c9c6c0",
+  "wallColor": "#1e3278",
+  "accent": "#D6A548",
+  "note": "切る前に、いったん溜める。暗幕を引いて、湯気の立つお茶を横に置いてから、つなぎ目を探す部屋。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      501,
+      295
+    ],
+    "right": [
+      995,
+      604
+    ],
+    "left": [
+      57,
+      593
+    ],
+    "front": [
+      551,
+      902
+    ],
+    "backTop": [
+      501,
+      82
+    ],
+    "leftTop": [
+      57,
+      380
+    ],
+    "rightTop": [
+      995,
+      391
+    ]
+  }
+}

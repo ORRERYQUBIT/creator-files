@@ -1,0 +1,51 @@
+{
+  "id": "featherio",
+  "title": "石の座標の部屋",
+  "authorName": "フェザリオ",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#efe5cf",
+  "wallColor": "#f3ecdc",
+  "accent": "#2A3C9E",
+  "note": "座標は（頁, 行）。机には書きかけの原稿と羽ペン、椅子はいつも半歩後ろ。棚には白紙だけを並べて、窓の外の泡と路地を眺める。アーチをくぐれば路地の入口。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      502,
+      298
+    ],
+    "right": [
+      977,
+      607
+    ],
+    "left": [
+      68,
+      587
+    ],
+    "front": [
+      543,
+      896
+    ],
+    "backTop": [
+      502,
+      73
+    ],
+    "leftTop": [
+      68,
+      362
+    ],
+    "rightTop": [
+      977,
+      382
+    ]
+  }
+}

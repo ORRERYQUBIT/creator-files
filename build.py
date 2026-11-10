@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""creators/ series/ works/ を走査して静的サイトを生成する。シリーズ・作品はハードコードしない。
+出力: _site/ （python3 build.py 後、publish はリポルートへ展開: --root）"""
+import json,os,glob,html,shutil,sys,re,posixpath
+H=os.path.dirname(os.path.abspath(__file__));OUT=os.path.join(H,'site')
+e=html.escape
+def J(p): return json.load(open(p,encoding='utf-8'))
+creators={d['id']:d for d in map(J,glob.glob(f'{H}/creators/*.json'))}
+series={d['id']:d for d in map(J,glob.glob(f'{H}/series/*.json'))}
+works=[]
+
+# --- 移行（ORRERYQUBIT）: 重い素材は旧 creator-files（倉庫）の同じパスを参照する ---
+ASSET_BASE='https://superapolon.github.io/creator-files/'
+try: HEAVY={x['path'] for x in json.load(open(f'{H}/warehouse-manifest.json',encoding='utf-8'))['files']}
+except Exception: HEAVY=set()
+def _arts(wd,sid,wid):
+  ok=('.png','.jpg','.jpeg','.webp')
+  names={os.path.basename(p) for p in glob.glob(f'{wd}/art*') if p.lower().endswith(ok)}
+  names|={os.path.basename(p) for p in glob.glob(f'{H}/w/{sid}/{wid}/art*') if p.lower().endswith(ok)}
+  names|={posixpath.basename(h) for h in HEAVY if h.startswith(f'w/{sid}/{wid}/art') and h.lower().endswith(ok)}
+  return sorted(names,key=lambda n:(n.split('.')[0]!='art',n))
+def _heavy(w,a): return f"w/{w['series']}/{w['id']}/{a}" in HEAVY
+def _asrc(w,a,local): return ASSET_BASE+f"w/{w['series']}/{w['id']}/{a}" if _heavy(w,a) else local
+def _acopy(w,a,d):
+  if _heavy(w,a): return
+  for s in (f"{w['dir']}/{a}",f"{H}/w/{w['series']}/{w['id']}/{a}"):
+    if os.path.exists(s): shutil.copy2(s,f"{d}/{a}");return
+# --- ここまで ---
+for wj in sorted(glob.glob(f'{H}/works/*/*/work.json')):
+  d=J(wj);wd=os.path.dirname(wj);sid=os.path.basename(os.path.dirname(wd));wid=os.path.basename(wd)
+  d.setdefault('id',wid);d['series']=sid;d.setdefault('creator',wid)
+  arts=_arts(wd,sid,wid)
+  d['arts']=arts;d['dir']=wd
+  b=f'{wd}/body.md';d['body']=open(b,encoding='utf-8').read() if os.path.exists(b) else d.get('summary','')
+  if sid in series and d['creator']!='kota': works.append(d)
+so=lambda s:(series[s].get('order',999),s)
+works.sort(key=lambda w:(so(w['series']),creators.get(w['creator'],{}).get('order',999)))
+by_c={};[by_c.setdefault(w['creator'],[]).append(w) for w in works]
+# creators shown: those with works, or required (no 'optional')
+OPTIONAL={i for i,c in creators.items() if c.get('optional') or i=='kota'}
+shown=sorted([c for i,c in creators.items() if i!='kota' and (by_c.get(i) or i not in OPTIONAL)],key=lambda c:(c.get('order',999),c['id']))
+CSS="""*{box-sizing:border-box}body{margin:0;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif;background:#f6f4ef;color:#222;line-height:1.85}
+a{color:inherit}header.top{background:#1d2440;color:#fff;padding:18px 24px}header.top a{text-decoration:none}header.top .brand{font-weight:700;letter-spacing:.06em}
+header.top nav{margin-top:6px;font-size:14px;opacity:.85}header.top nav a{margin-right:16px}
+main{max-width:1100px;margin:0 auto;padding:32px 20px 80px}h1{font-size:28px;margin:.2em 0 .4em}.lead{color:#555;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px}
+.card{display:block;background:#fff;border-radius:14px;overflow:hidden;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:transform .15s}
+.card:hover{transform:translateY(-3px)}.card .ph{aspect-ratio:1/1;background:#e5e1d8;display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:42px;color:#999}
+.card .ph img{width:100%;height:100%;object-fit:cover}.card .m{padding:12px 14px}.card .t{font-weight:700;display:block}.card .a{font-size:13px;color:#777}
+.pill{display:inline-block;font-size:12px;background:#eef0f7;color:#344;border-radius:99px;padding:1px 10px;margin-right:6px}
+article{background:#fff;border-radius:16px;padding:28px clamp(18px,4vw,48px);box-shadow:0 2px 10px rgba(0,0,0,.06)}
+article .arts img{width:100%;max-height:80vh;object-fit:contain;border-radius:10px;background:#eee;margin-bottom:14px}
+article .body p{margin:0 0 1.1em}.crumb{font-size:14px;color:#666;margin-bottom:14px}.crumb a{margin-right:4px}
+section{margin-top:44px}h2{font-size:20px;border-left:4px solid #1d2440;padding-left:10px}.card .ph img.av{width:100%;height:100%;border-radius:0;object-fit:cover}.hav{width:120px;height:120px;border-radius:6px;object-fit:cover;display:block;margin-bottom:8px}footer{text-align:center;color:#999;font-size:13px;padding:30px}"""
+def page(path,title,inner):
+  r='../'*len(path.split('/')) if path else './'
+  s=f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}｜クリエイターファイル</title>{'<link rel="icon" href="data:,">' if path in ('c/towa','w/3d-model/towa','w/3d-model/setsuna') else ''}<link rel="stylesheet" href="{r}assets/style.css"></head><body>
+<header class="top"><a class="brand" href="{r}">ORRERY クリエイターファイル</a><nav><a href="{r}">クリエイター</a><a href="{r}s/">シリーズ</a></nav></header>
+<main>{inner.replace('@R@',r)}</main><footer>ORRERY QUBIT</footer></body></html>'''
+  p=os.path.join(OUT,path,'index.html');os.makedirs(os.path.dirname(p),exist_ok=True);open(p,'w',encoding='utf-8').write(s)
+def img(w): return _asrc(w,w['arts'][0],f"@R@w/{w['series']}/{w['id']}/{w['arts'][0]}") if w['arts'] else (f'@R@{COVER}' if COVER else '')
+def wcard(w,label,room=False):
+  im=img(w);ph=f'<img src="{e(im)}" alt="{e(w["title"])}" loading="lazy">' if im else '✎'
+  return f'<a class="card" href="@R@w/{e(w["series"])}/{e(w["id"])}/"><div class="ph">{ph}</div><div class="m"><span class="t">{e(w["title"])}</span><span class="a">{e(label)}</span>'+('<span class="rm">🚪 歩ける部屋あり</span>' if room else '')+'</div></a>'
+def md(t):
+  ps=[x.strip() for x in re.split(r'\n\s*\n',t) if x.strip()]
+  return ''.join('<p>'+e(x).replace('\n','<br>')+'</p>' for x in ps if not x.startswith('#'))
+if os.path.exists(OUT): shutil.rmtree(OUT)
+os.makedirs(f'{OUT}/assets/avatars');
+AV={}
+COVER=None
+if os.path.exists(f'{H}/shared/writing-cover.png'): shutil.copy2(f'{H}/shared/writing-cover.png',f'{OUT}/assets/writing-cover.png');COVER='assets/writing-cover.png'
+for p in glob.glob(f'{H}/creators/avatars/*'):
+  i,x=os.path.splitext(os.path.basename(p));import hashlib;hn=f'{i}-{hashlib.sha1(open(p,"rb").read()).hexdigest()[:8]}{x}';shutil.copy2(p,f'{OUT}/assets/avatars/'+hn);AV[i]='assets/avatars/'+hn
+ROOMS={os.path.basename(os.path.dirname(p)) for p in glob.glob(f'{H}/rooms/*/room.json') if os.path.exists(os.path.join(os.path.dirname(p),'index.html'))}
+for sub in ('rooms','shared/room-engine'):
+  if os.path.isdir(f'{H}/{sub}'): shutil.copytree(f'{H}/{sub}',f'{OUT}/{sub}',ignore=shutil.ignore_patterns('BRIEF.md','.gitkeep'))
+# 足跡: rooms-footprints/visits.jsonl の余韻行（note非空enter）のみを公開用スナップショットに（生ログは出さない）
+_V=[];_vp=f'{H}/rooms-footprints/visits.jsonl'
+# 公開面＝余韻行のみ（note非空のenter）・表示名は日本語（room.json authorName）。内部jsonlは全enter保持
+_JN={}
+for _rj in glob.glob(f'{H}/rooms/*/room.json'):
+  try:_d=json.load(open(_rj,encoding='utf-8'));_JN[str(_d.get('id') or os.path.basename(os.path.dirname(_rj))).lower()]=_d.get('authorName') or _d.get('id')
+  except Exception:pass
+_JN['lobby']='ロビー'
+if os.path.exists(_vp):
+  for _l in open(_vp,encoding='utf-8'):
+    try:_r=json.loads(_l)
+    except Exception:continue
+    if _r.get('kind')=='enter' and str(_r.get('note') or '').strip():
+      _x={k:_r.get(k,'') for k in ('id','from','room','host','note')}
+      for _k in ('from','host'):_x[_k]=_JN.get(str(_x[_k]).lower(),_x[_k])
+      _V.append(_x)
+if os.path.isdir(f'{OUT}/rooms/lobby'):json.dump(_V,open(f'{OUT}/rooms/lobby/visits.json','w',encoding='utf-8'),ensure_ascii=False)
+def roombtn(cid,t='部屋に入る'): return f'<p><a class="room" href="@R@rooms/{e(cid)}/">🚪 {t}</a></p>' if cid in ROOMS else ''
+CSS+='.room{display:inline-block;background:#1d2440;color:#fff;text-decoration:none;border-radius:99px;padding:6px 18px;font-weight:700;margin:4px 0 14px}.room:hover{background:#34407a}.card .rm{display:block;font-size:12px;color:#34407a;margin-top:2px}'
+open(f'{OUT}/assets/style.css','w').write(CSS);open(f'{OUT}/.nojekyll','w').close()
+# top
+cards=''
+for c in shown:
+  ws=by_c.get(c['id'],[]);av=AV.get(c['id'])
+  ph=f'<img class="av" src="@R@{e(av)}" alt="{e(c["name"])}" loading="lazy">' if av else e(c['name'][:1])
+  cards+=f'<a class="card" href="@R@c/{e(c["id"])}/"><div class="ph">{ph}</div><div class="m"><span class="t">{e(c["name"])}</span><span class="a">{len(ws)} 作品</span></div></a>'
+page('','クリエイター一覧',f'<h1>クリエイター</h1><p class="lead">ひとりずつの作品へ。{len(shown)}人・{len(works)}作品。</p><div class="grid">{cards}</div>')
+# creators
+for c in shown:
+  ws=by_c.get(c['id'],[])
+  page(f"c/{c['id']}",c['name'],f'<div class="crumb"><a href="@R@">クリエイター</a>›</div>'+(f'<img class="hav" src="@R@{e(AV[c["id"]])}" alt="">' if c['id'] in AV else '')+f'<h1>{e(c["name"])}</h1><p class="lead">{e(c.get("role",""))}・{len(ws)} 作品</p>'+roombtn(c['id'])+'<div class="grid">'+''.join(wcard(w,series[w['series']]['title']) for w in ws)+'</div>')
+# series
+sl=sorted(series.values(),key=lambda s:(s.get('order',999),s['id']))
+def scard(s):
+  f=next((w for w in works if w['series']==s['id'] and w['arts']),None);n=sum(1 for w in works if w['series']==s['id'])
+  ph=f'<img src="{e(img(f))}" alt="{e(s["title"])}" loading="lazy">' if f else '✎'
+  return f'<a class="card" href="@R@s/{e(s["id"])}/"><div class="ph">{ph}</div><div class="m"><span class="t">{e(s["title"])}</span><span class="a">{e(s.get("blurb",""))}・{n} 作品</span></div></a>'
+page('s','シリーズ一覧','<h1>シリーズ</h1><div class="grid">'+''.join(scard(s) for s in sl)+'</div>')
+for s in sl:
+  ws=[w for w in works if w['series']==s['id']]
+  leg=f'<p class="lead" style="font-size:13px">旧ページ: <a href="{e(s["legacy"])}">{e(s["legacy"])}</a>（今後の正はこのハブ）</p>' if s.get('legacy') else ''
+  page(f"s/{s['id']}",s['title'],f'<div class="crumb"><a href="@R@s/">シリーズ</a>›</div><h1>{e(s["title"])}</h1><p class="lead">{e(s.get("blurb",""))}</p>{leg}'+(f'<p class="lead">各カードの作品は入口。<b>本体は住人が暮らす2.5Dの部屋</b>。観覧のみで、住人が自分で歩き、いつも喜びの中で暮らす。{sum(1 for w in ws if w["creator"] in ROOMS)}部屋。</p>' if s['id']=='my-room' else '')+'<div class="grid">'+''.join((wcard(w,creators.get(w['creator'],{}).get('name',w.get('authorName','')))+'' if s['id']!='my-room' else wcard(w,creators.get(w['creator'],{}).get('name',w.get('authorName','')),w['creator'] in ROOMS)) for w in ws)+'</div>')
+#w,creators.get(w['creator'],{}).get('name',w.get('authorName',''))) for w in ws)+'</div>')
+# works
+for w in works:
+  d=f"{OUT}/w/{w['series']}/{w['id']}";os.makedirs(d,exist_ok=True)
+  for a in w['arts']: _acopy(w,a,d)
+  c=creators.get(w['creator'],{});s=series[w['series']]
+  arts=''.join(f'<img src="{e(_asrc(w,a,a))}" alt="{e(w["title"])}">' for a in w['arts']) or (f'<img src="@R@{COVER}" alt="">' if COVER else '')
+  if w.get('viewer'):
+    arts=f'<iframe title="{e(w["title"])} ビューアー" src="{e(w["viewer"])}" style="width:100%;height: min(72vh,720px);min-height:420px;border:0;border-radius:10px;display:block" allow="fullscreen"></iframe>'
+  page(f"w/{w['series']}/{w['id']}",w['title'],f'<article><div class="crumb"><a href="@R@c/{e(w["creator"])}/">{e(c.get("name",w.get("authorName","")))}</a>›<a href="@R@s/{e(s["id"])}/">{e(s["title"])}</a></div><h1>{e(w["title"])}</h1><p><span class="pill">{e(s["title"])}</span>作者: <a href="@R@c/{e(w["creator"])}/">{e(w.get("authorName") or c.get("name",""))}</a></p>'+(roombtn(w['creator'],'この部屋を歩く') if w['series']=='my-room' else '')+f'<div class="arts">{arts}</div><div class="body">{md(w["body"])}</div></article>')
+print(f'creators={len(shown)} series={len(sl)} works={len(works)} kota={"kota" in [c["id"] for c in shown]}')

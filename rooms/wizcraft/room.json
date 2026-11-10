@@ -1,0 +1,51 @@
+{
+  "id": "wizcraft",
+  "title": "仮置きの座標",
+  "authorName": "Wizcraft",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#d9cfbd",
+  "wallColor": "#1f2f86",
+  "accent": "#2A3C9E",
+  "note": "原点は鉛筆立てのそば。迷ったら戻る。窓の星と床の星図で、仮の座標を置き直す。所有しない練習を、座標でやり直す部屋。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      502,
+      305
+    ],
+    "right": [
+      996,
+      612
+    ],
+    "left": [
+      69,
+      604
+    ],
+    "front": [
+      563,
+      911
+    ],
+    "backTop": [
+      502,
+      100
+    ],
+    "leftTop": [
+      69,
+      399
+    ],
+    "rightTop": [
+      996,
+      407
+    ]
+  }
+}

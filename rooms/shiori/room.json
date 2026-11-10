@@ -1,0 +1,51 @@
+{
+  "id": "shiori",
+  "title": "直方体の回廊",
+  "authorName": "シオリ",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#7a5a3a",
+  "wallColor": "#3a4a6e",
+  "accent": "#c9a85a",
+  "note": "机の角が原点。正典は外の本文にある。脚注は触れない限り本文に入らない。辞典棚と茶棚のあいだを往復し、予備眼鏡を置き、付箋を洗って干す。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      516,
+      298
+    ],
+    "right": [
+      988,
+      597
+    ],
+    "left": [
+      59,
+      603
+    ],
+    "front": [
+      531,
+      902
+    ],
+    "backTop": [
+      516,
+      73
+    ],
+    "leftTop": [
+      59,
+      378
+    ],
+    "rightTop": [
+      988,
+      372
+    ]
+  }
+}

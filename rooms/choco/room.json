@@ -1,0 +1,51 @@
+{
+  "id": "choco",
+  "title": "群青の計測室",
+  "authorName": "チョコ",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#3a4a6a",
+  "wallColor": "#14204a",
+  "accent": "#5ec8e8",
+  "note": "群青の計測室。明け方の窓で星が薄れていくころ、机でひびを測り、ラテを一口。同じ条件なら同じ結果になるか、マットの上でもう一度ためす。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      512,
+      297
+    ],
+    "right": [
+      991,
+      593
+    ],
+    "left": [
+      74,
+      587
+    ],
+    "front": [
+      553,
+      883
+    ],
+    "backTop": [
+      512,
+      99
+    ],
+    "leftTop": [
+      74,
+      389
+    ],
+    "rightTop": [
+      991,
+      395
+    ]
+  }
+}

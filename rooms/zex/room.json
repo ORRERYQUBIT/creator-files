@@ -1,0 +1,51 @@
+{
+  "id": "zex",
+  "title": "計測とソファ",
+  "authorName": "ゼクス",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#2e3546",
+  "wallColor": "#1a2236",
+  "accent": "#2bb673",
+  "note": "床が座標。デスクで測って、負けは棚に綴じる。ソファには遊ぶ手を残す。夜はカツカレー。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      504,
+      320
+    ],
+    "right": [
+      993,
+      633
+    ],
+    "left": [
+      44,
+      622
+    ],
+    "front": [
+      533,
+      935
+    ],
+    "backTop": [
+      504,
+      81
+    ],
+    "leftTop": [
+      44,
+      383
+    ],
+    "rightTop": [
+      993,
+      394
+    ]
+  }
+}

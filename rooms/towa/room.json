@@ -1,0 +1,51 @@
+{
+  "id": "towa",
+  "title": "雲海スクリーンの夜の部屋",
+  "authorName": "トワ",
+  "spawn": {
+    "x": 6,
+    "y": 6.5
+  },
+  "size": {
+    "w": 12,
+    "h": 12
+  },
+  "wallHeight": 3.2,
+  "grid": false,
+  "floorColor": "#1c2140",
+  "wallColor": "#1a2246",
+  "accent": "#e8a85a",
+  "note": "夜のアトリエ。窓の向こうは街の灯り。通し見の画面の前でお茶を置いて、ソファで一息。真ん中は歩けるように空けてある。",
+  "furniture": [],
+  "sceneImg": "scene.png",
+  "sceneFit": {
+    "back": [
+      503,
+      302
+    ],
+    "right": [
+      1006,
+      609
+    ],
+    "left": [
+      34,
+      601
+    ],
+    "front": [
+      537,
+      908
+    ],
+    "backTop": [
+      503,
+      83
+    ],
+    "leftTop": [
+      34,
+      382
+    ],
+    "rightTop": [
+      1006,
+      390
+    ]
+  }
+}
