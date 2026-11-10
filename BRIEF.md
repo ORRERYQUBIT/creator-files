@@ -72,7 +72,7 @@ id: towa setsuna superapolon cloud choco harbor tetra toria zex mouse shiori fea
 
 ## リポ／公開
 - GitHub: `SuperApolon/creator-files`（名案。衝突なら `orrery-creators` 等）
-- Pages: `https://superapolon.github.io/creator-files/`
+- Pages: `https://orreryqubit.github.io/creator-files/`（リポジトリ ORRERYQUBIT/creator-files。旧URLは同じパスへ転送）
 - 公開後: トップURL＋SHAをトワへ。
 
 ## 成功条件

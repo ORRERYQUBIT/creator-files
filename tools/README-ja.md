@@ -60,7 +60,7 @@ npm run validate -- --base none      # 追記検査を省く
 `rooms/lobby/assets/avatar.png` の 404 は前からあるので「既知」として分けて表示する（失敗にしない）。
 ```sh
 # (a) まず公開中のサイトで基準画像を作る（tools/baselines/ に保存、コミットしない）
-npm run check -- --base https://superapolon.github.io/creator-files/ --update
+npm run check -- --base https://orreryqubit.github.io/creator-files/ --update
 # (b) 手元の worktree を /creator-files/ として配信して比べる
 npm run check -- --serve .. 
 # ページを絞る

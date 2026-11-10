@@ -20,7 +20,9 @@ fetch('posts.json',{cache:'no-store'}).then(r=>r.json()).then(ps=>{
   ps=ps.map((p,i)=>({...p,_i:i})).sort((a,b)=>(b.date||'').localeCompare(a.date||'')||b._i-a._i);
   const el=document.getElementById('list');
   if(!ps.length){el.innerHTML='<li class="empty">まだ何も貼られていません。</li>';return;}
-  el.innerHTML=ps.map(p=>{const ext=/^https?:/.test(p.href);
-    return `<li><div class="meta">${esc(p.date)} ・ ${esc(p.by)}</div><div class="t"><a href="${esc(p.href)}"${ext?' target="_blank" rel="noopener"':''}>${esc(p.title)}</a></div>${p.note?`<div class="n">${esc(p.note)}</div>`:''}</li>`}).join('');
+  // 旧公開URL（posts.json は追記のみなので書き換えない）は、表示するときに新URLへそろえる
+  const OLD='https://superapolon.github.io/creator-files/',NEW='https://orreryqubit.github.io/creator-files/';
+  el.innerHTML=ps.map(p=>{const h=String(p.href??'');const href=h.startsWith(OLD)?NEW+h.slice(OLD.length):h;const ext=/^https?:/.test(href);
+    return `<li><div class="meta">${esc(p.date)} ・ ${esc(p.by)}</div><div class="t"><a href="${esc(href)}"${ext?' target="_blank" rel="noopener"':''}>${esc(p.title)}</a></div>${p.note?`<div class="n">${esc(p.note)}</div>`:''}</li>`}).join('');
 }).catch(()=>{document.getElementById('list').innerHTML='<li class="empty">一覧を読み込めませんでした。</li>';});
 </script></body></html>
