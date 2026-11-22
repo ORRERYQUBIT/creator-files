@@ -1,0 +1,13 @@
+*{box-sizing:border-box}html,body{margin:0}body{font-family:"Hiragino Mincho ProN","Noto Serif JP",serif;color:#e8e4d8;background:#0d0f1a;line-height:1.9}
+main{max-width:40rem;margin:0 auto;padding:56px 20px 32px}
+.kicker{margin:0 0 10px;font-size:13px;letter-spacing:.16em;color:#e8a85a}
+h1{font-size:clamp(32px,6vw,52px);font-weight:400;letter-spacing:.14em;margin:0 0 12px}
+.lead{font-size:20px;margin:0 0 18px;letter-spacing:.06em}
+h2{font-size:16px;font-weight:400;letter-spacing:.14em;margin:36px 0 10px;color:#e8a85a}
+.playwrap{margin:28px 0}
+a.play{display:inline-block;padding:.55em 1.6em;border:1px solid #e8a85a;color:#e8a85a;text-decoration:none;letter-spacing:.18em;font-size:15px}
+a.play:hover{background:#e8a85a;color:#0d0f1a}
+ul{margin:0;padding:0 0 0 1.2em}li{margin:0 0 8px}
+kbd{display:inline-block;min-width:1.2em;padding:0 5px;border:1px solid rgba(232,228,216,.35);border-radius:4px;font:600 12px/1.6 system-ui,sans-serif}
+.note{font-size:14px;opacity:.7}
+footer{text-align:center;padding:40px 20px;font-size:13px;color:#e8e4d8;opacity:.7}footer a{color:inherit}

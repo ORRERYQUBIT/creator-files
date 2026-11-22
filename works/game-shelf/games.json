@@ -74,6 +74,12 @@
   ],
   "team": [
     {
+      "id": "orrery-mother",
+      "title": "Mother — 工場型アクションRPG",
+      "href": "https://superapolon2.github.io/creator-media/works/mother/",
+      "by": "ORRERY QUBIT"
+    },
+    {
       "id": "verdant-zero",
       "title": "VERDANT//ZERO RPG",
       "href": "https://superapolon.github.io/verdant-zero-games/rpg/",
